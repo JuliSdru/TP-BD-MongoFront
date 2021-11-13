@@ -7,10 +7,11 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   userUrl = "";
   title = 'tp';
-  urlServer = "https://tp-ticketera-samaniego.herokuapp.com/";
+  urlServer = "https://tp-ticketera.herokuapp.com/";
   ticketsDesperfectos:any=[] ;
   ticketsEmpleados: any=[];
   ticketsZona: any =[];
