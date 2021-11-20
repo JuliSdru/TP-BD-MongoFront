@@ -13,6 +13,8 @@ export class AppComponent {
   title = 'tp';
   urlServer = "https://tp-ticketera.herokuapp.com/";
 
+
+  
   constructor(private http: HttpClient) {
     this.userUrl=this.urlServer;
   }
