@@ -12,13 +12,21 @@ export class AppComponent {
   userUrl = "";
   title = 'tp';
   urlServer = "https://tp-ticketera.herokuapp.com/";
-
-
+  todos= "";
+  responseDesperfectos: any;
+  usedUrl= "";
   
   constructor(private http: HttpClient) {
     this.userUrl=this.urlServer;
   }
 
+  getDesperfectos() {
+    return this.http.get(this.urlServer)
+      .subscribe((data: any) => {
+        this.responseDesperfectos = JSON.stringify(data)
+
+      })
+  }
 
 
 }
