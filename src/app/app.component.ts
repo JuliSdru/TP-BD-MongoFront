@@ -66,7 +66,7 @@ export class AppComponent {
   }
 
   getDistanciaCliente() {
-    return this.http.get(this.urlServer.concat("distanciaCliente"))
+    return this.http.get(this.urlServer.concat("clientesTicketsDistancia"))
       .subscribe((data: any) => {
         this.zona = JSON.stringify(data)
       })
@@ -78,6 +78,8 @@ export class AppComponent {
         this.zona = JSON.stringify(data)
       })
   }
+
+
 
   getGeoZonaSur() {
     return this.http.get(this.urlServer.concat("geoZonaSur"))
