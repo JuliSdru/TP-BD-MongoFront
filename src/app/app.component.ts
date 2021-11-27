@@ -26,7 +26,7 @@ export class AppComponent {
   get() {
     return this.http.get(this.urlServer)
       .subscribe((data: any) => {
-        this.desperfectos = JSON.stringify(data)
+        this.todos = JSON.stringify(data)
       })
   }
 
