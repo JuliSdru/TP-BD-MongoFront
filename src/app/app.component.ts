@@ -52,14 +52,14 @@ export class AppComponent {
   }
 
   getReclamosCliente() {
-    return this.http.get(this.urlServer.concat("empleadoCliente"))
+    return this.http.get(this.urlServer.concat("reclamosClientes"))
       .subscribe((data: any) => {
         this.cliente = JSON.stringify(data)
       })
   }
 
   getEmpleadoCliente() {
-    return this.http.get(this.urlServer.concat("reclamosClientes"))
+    return this.http.get(this.urlServer.concat("empleadoCliente"))
       .subscribe((data: any) => {
         this.cliente = JSON.stringify(data)
       })
