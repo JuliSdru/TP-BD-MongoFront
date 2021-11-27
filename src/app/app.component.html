@@ -302,38 +302,38 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<!-- <div class="toolbar" role="banner">
   <img width="40" alt="Angular Logo"
     src="../assets/utnfra-logo.png" />
-</div>
+</div> -->
 
 <div class="content" role="main">
 
-  <h2>Ticketera - Trabajo práctico - Base de datos II</h2>
+  <h2>Ticketera</h2>
   
   <p>Consultas por desperfectos:</p>
   <div class="card-container">  
-    <a class="card" rel="noopener" href="#" (click)="getDesperfectos()">
+    <a class="card" rel="noopener" href="#" (click)="get()">
       <span>Desperfectos</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <!-- <a class="card" rel="noopener" href="#" (click)="getDesperfectosDondeOcurren()">
-      <span>Donde ocurren</span>
+     <a class="card" rel="noopener" href="#" (click)="getMotivo()">
+      <span>Motivo</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getDesperfectosCadaCuanto()">
-      <span>Cada cuanto ocurren</span>
+    <a class="card" rel="noopener" href="#" (click)="getDesperfectosUbicados()">
+      <span>Desperfectos ubicacion</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
-    </a> -->
+    </a> 
   </div>
-   <p class="response">{{responseDesperfectos}}</p>
-<!--
+   <p class="response">{{desperfectos}}</p>
+
   <p>Consultas por control de atención:</p>
   <div class="card-container">  
     <a class="card" rel="noopener" href="#" (click)="getAtencionEmpleado()">
@@ -342,63 +342,64 @@
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getAtencionHorario()">
-      <span>Horario de mayor trabajo</span>
+    <a class="card" rel="noopener" href="#" (click)="getReclamosFinalizado()">
+      <span>Reclamos finalizados</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getAtencionTrabajos()">
-      <span>Trabajos sin resolver</span>
+    <a class="card" rel="noopener" href="#" (click)="getReclamoDerivado()">
+      <span>Reclamos derivado</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
   </div>
-  <p class="response">{{responseAtenciones}}</p>
+  <p class="response">{{atencion}}</p>
 
   <p>Consultas zonales:</p>
   <div class="card-container">  
-    <a class="card" rel="noopener" href="#" (click)="getZonalesDesperfectos()">
-      <span>Desperfectos por zona</span>
+    <a class="card" rel="noopener" href="#" (click)="getDistanciaCliente()">
+      <span>Distancia entre cliente y un punto</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getZonalesAtenciones()">
-      <span>Atenciones por zona</span>
+    <a class="card" rel="noopener" href="#" (click)="getMismaZonaCliente()">
+      <span>Cantidad de clientes por zona</span>
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      </svg>
+    </a>
+    <a class="card" rel="noopener" href="#" (click)="getGeoZonaSur()">
+      <span>Clientes zona sur</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
   </div>
-  <p class="response">{{responseZonales}}</p>
+  <p class="response">{{zona}}</p>
 
   <p>Consultas de clientes:</p>
   <div class="card-container">  
-    <a class="card" rel="noopener" href="#" (click)="getClientesConsultas()">
-      <span>Cliente con más tickets</span>
+    <a class="card" rel="noopener" href="#" (click)="getClienteUno()">
+      <span>Cliente</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getClientesTickets()">
-      <span>Clientes con tickets sin resolver</span>
+    <a class="card" rel="noopener" href="#" (click)="getReclamosCliente()">
+      <span>Clientes con reclamos</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getClientesZona()">
-      <span>Zona con más clientes</span>
+    <a class="card" rel="noopener" href="#" (click)="getEmpleadoCliente()">
+      <span>Empleado que ademas es cliente</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
     </a>
-    <a class="card" rel="noopener" href="#" (click)="getClientesEmpleados()">
-      <span>Clientes empleados que generan tickets</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-      </svg>
-    </a> -->
+  
   </div>
-  <!-- <p class="response">{{responseClientes}}</p> -->
+   <p class="response">{{cliente}}</p> 
